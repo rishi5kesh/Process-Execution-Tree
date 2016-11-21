@@ -1,0 +1,72 @@
+1. Name:     Rishikesh S
+   ID  :     2016H103016G
+
+##############################
+
+2. LIST OF FILES:
+
+exec_tree.c
+	creates the tree structure, each process reads line by line from first to last and executes in reverse Breadth First order.
+
+makefile
+	used to compile/run the program 
+
+commands
+	add a list of 12 commands to be executed one after the other to this file
+
+###############################
+
+3. HOW TO COMPILE:
+	
+navigate to the directory containing the makefile using cd
+
+	"make all"
+
+###############################
+
+4. HOW TO USE:
+	
+type this in terminal
+
+	"make run"
+
+###############################
+
+5. Program structure:
+
+                        0
+		       / \
+		      /	  \
+		     /     \
+		    1       2
+		   /       / \
+		  /       /   \
+		 /       /     \
+		3       4       5
+               /       / \     /|\
+              /       /   \   / | \
+             6       7     8 9  10 11
+
+	1. create an array of 12 process ids starting 0 to 11 which corresponds to the above tree node numbers.
+
+	2. use if conditions to check against pids and fork out all the 11 children according to the tree structure.
+
+	3. in each of the processes read the corresponding line from the file such that it is read from first to last order. 
+
+	4. Use a small sleeping time in order of microseconds to sleep if the process id does not match the corresponding getpid
+	   for the sake of syncronization.
+
+	5. if the process id matches getpid, read the line, tokenize it ad execute it.
+
+###############################
+
+6. ASSIGNMENT COMPLETED
+
+	What I have done:
+
+	1. completed all the requirements given in the question.
+
+###############################
+
+
+
